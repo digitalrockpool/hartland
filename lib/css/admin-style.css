@@ -1,0 +1,95 @@
+/* Admin Styles
+
+@package	Hartland
+@author		Digital Rockpool
+@link		https://www.digitalrockpool.com
+@copyright	Copyright (c) 2022, Digital Rockpool LTD
+@license	GPL-2.0+
+
+# Table of Contents
+  - Publish Box
+  - Wholesale User Pricing Accordion
+*/
+
+/* # Publish Box
+------------------------------------------------------ */
+#publishing-action #publish,
+#wholesale-multiuser-pricing .wwp-button-primary {
+	margin-right: 0!important;
+	font-size: 13px!important;
+	font-weight: 400!important;
+	line-height: 2.30769231!important;
+	box-shadow: none!important;
+	position: relative!important;
+	z-index: 1!important;
+	text-align: center!important;
+	cursor: pointer!important;
+	border: none!important;
+	border-radius: 3px!important;
+	display: inline-block!important;
+	outline: 0!important;
+	padding: 0 12px!important;
+	vertical-align: middle!important;
+	box-shadow: none!important;
+	color: #fff!important;
+	background-color: #2271b1!important;
+	background: #2271b1!important;
+	text-decoration: none!important;
+	transition: all 0.5s ease 0s !important;
+}
+
+#publishing-action #publish:hover,
+#wholesale-multiuser-pricing .wwp-button-primary:hover {
+	color: #fff!important;
+	background: #135e96!important;
+	transition: all 0.5s ease 0s !important;
+	box-shadow: none!important;
+}
+
+/* # Wholesale User Pricing Accordion
+------------------------------------------------------ */
+.wholesale_container #accordion .card > button {
+  color: #2271b1;
+  font-size: 13px;
+}
+
+#wholesale-multiuser-pricing #accordion .card > button:after {
+  border: 1px solid #787c82;
+  color: #787c82;
+  font-weight: 400;
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
+}
+
+#wholesale-multiuser-pricing #accordion .wwp_circle.wwp_circle_on.active {
+  border: 1px solid #69CC33!important;
+}
+
+#wholesale-multiuser-pricing table th {
+  font-size: 13px;
+}
+
+#wholesale-multiuser-pricing #accordion select,
+#wholesale-multiuser-pricing input[type=text],
+#wholesale-multiuser-pricing input[type=number],
+#woocommerce-product-data input[type=text] {
+  border: 1px solid #8c8f94!important;
+  padding: 0 8px!important;
+}
+
+#wholesale-multiuser-pricing .cbx span:first-child {
+  border: 1px solid #8c8f94!important;
+  border-radius: 4px!important;
+  height: 18px;
+  width: 18px;
+}
+
+#wholesale-multiuser-pricing .cbx span:last-child {
+  font-size: 13px;
+  padding-top: 1px;
+}
+
+#woocommerce-product-data input[type=text].select2-search__field {
+  border: none!important;
+}
