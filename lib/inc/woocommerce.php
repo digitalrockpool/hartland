@@ -13,6 +13,8 @@
   - Set endpoint for email preferences
   - Set tabs on product pages
 	- Change woocommerce text
+	- Change woocommerce backorder text
+  - Add woocommerce price prefix
   - Remove product links and thumbnails from basket
   - Remove phone number checkout field
   - Add plus & minus to quantity
@@ -109,6 +111,29 @@ add_filter('gettext', function ($translated_text, $text, $domain) {
 	endif;
   return $translated_text;
 }, 20, 3);
+
+
+function change_sale_text() {
+  return '<span class="onsale">Pre-order</span>';
+}
+add_filter('woocommerce_sale_flash', 'change_sale_text');
+
+//*** Change woocommerce backorder text
+function change_backorder_message( $text, $product ) {
+  if( $product->is_on_backorder( 1 ) ) :
+      $text = __( 'Pre-orders will be shipped after the 30th September', 'hartland' );
+  endif;
+  return $text;
+}
+add_filter( 'woocommerce_get_availability_text', 'change_backorder_message', 10, 2 );
+
+
+//*** Add woocommerce price prefix
+function add_price_prefix( $price, $product ){
+    $price = '<span class="price-prefix">Pre-order before 30th September and get 20% off</span>' . $price;
+    return $price;
+}
+add_filter( 'woocommerce_get_price_html', 'add_price_prefix', 99, 2 );
 
 
 //*** Remove product links and thumbnails from basket

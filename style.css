@@ -19,6 +19,7 @@
     - Tables
     - Sidebar Filters & Default Sorting
     - Product Images
+    - Price
     - Quantity
     - Additional Information (Attributes)
     - Reviews
@@ -279,9 +280,28 @@ input::-ms-input-placeholder {
   }
 }
 
+
+/* ## Woocommerce - Price
+-------------------------------------------------- */
+.woocommerce div.product .price .price-prefix {
+  display: block;
+  font-size: 20px;
+}
+
+.woocommerce ul.products .price .price-prefix {
+  display: none;
+}
+
+.woocommerce div.product p.price ins,
+.woocommerce div.product span.price ins {
+  text-decoration: none;
+}
+
+
 /* ## Woocommerce - Quantity
 -------------------------------------------------- */
-.woocommerce div.product .out-of-stock {
+.woocommerce div.product .out-of-stock,
+.woocommerce div.product .stock {
   color: #211f1f;
 }
 
