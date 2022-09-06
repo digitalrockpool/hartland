@@ -121,7 +121,7 @@ add_filter('woocommerce_sale_flash', 'change_sale_text');
 //*** Change woocommerce backorder text
 function change_backorder_message( $text, $product ) {
   if( $product->is_on_backorder( 1 ) ) :
-      $text = __( 'Pre-orders will be shipped after the 30th September', 'hartland' );
+    $text = __( 'Pre-orders will be shipped after the 30th September', 'hartland' );
   endif;
   return $text;
 }
@@ -130,7 +130,9 @@ add_filter( 'woocommerce_get_availability_text', 'change_backorder_message', 10,
 
 //*** Add woocommerce price prefix
 function add_price_prefix( $price, $product ){
+  if( $product->is_on_backorder( 1 ) ) :
     $price = '<span class="price-prefix">Pre-order before 30th September and get 20% off</span>' . $price;
+  endif;
     return $price;
 }
 add_filter( 'woocommerce_get_price_html', 'add_price_prefix', 99, 2 );
