@@ -288,12 +288,14 @@ input::-ms-input-placeholder {
   font-size: 20px;
 }
 
-.woocommerce ul.products .price .price-prefix {
+.woocommerce ul.products .price .price-prefix,
+.e-swiper-container .price .price-prefix {
   display: none;
 }
 
 .woocommerce div.product p.price ins,
-.woocommerce div.product span.price ins {
+.woocommerce div.product span.price ins,
+.e-swiper-container .price ins {
   text-decoration: none;
 }
 
