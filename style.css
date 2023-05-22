@@ -4,7 +4,7 @@
  Author:       Digital Rockpool
  Author URI:   https://digitalrockpool.com
  Template:     hello-elementor
- Version:      1.0.0
+ Version:      1.1.0
  Text Domain:  hello-elementor
 */
 
@@ -316,7 +316,9 @@ input::-webkit-inner-spin-button {
 
 /* Remove arrows in number inputs - Firefox */
 input[type=number] {
+  appearance: textfield;
   -moz-appearance: textfield;
+  -webkit-appearance: textfield;
 }
 
 .woocommerce div.product form.cart div#wc-square-digital-wallet {
